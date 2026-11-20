@@ -1,9 +1,27 @@
 [gd_scene format=3 uid="uid://3mrs7jxipue"]
 
+[ext_resource type="Script" uid="uid://dvxi8oropb2hm" path="res://player/player.gd" id="1_oul6g"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ymhcm"]
 
 [node name="Player" type="CharacterBody2D" unique_id=1665840665]
 collision_layer = 2
+script = ExtResource("1_oul6g")
+player_number = null
+move_speed = null
+ground_accel = null
+ground_decel = null
+air_accel = null
+air_decel = null
+jump_velocity = null
+jump_cut = null
+gravity = null
+fast_fall_gravity = null
+max_fall_speed = null
+fast_fall_max_speed = null
+max_jumps = null
+coyote_time = null
+jump_buffer_time = null
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=916774257]
 color = Color(0.29411766, 1, 1, 1)
