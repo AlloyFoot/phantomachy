@@ -32,6 +32,7 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformLeft" unique_id=2125551245]
 shape = SubResource("RectangleShape2D_jyk7v")
+one_way_collision = true
 
 [node name="ColorRect" type="ColorRect" parent="PlatformLeft" unique_id=1057282702]
 anchors_preset = 8
@@ -53,6 +54,7 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformRight" unique_id=1452208650]
 shape = SubResource("RectangleShape2D_jyk7v")
+one_way_collision = true
 
 [node name="ColorRect" type="ColorRect" parent="PlatformRight" unique_id=2101565864]
 anchors_preset = 8
@@ -75,6 +77,7 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformTop" unique_id=577797]
 shape = SubResource("RectangleShape2D_jyk7v")
+one_way_collision = true
 
 [node name="ColorRect" type="ColorRect" parent="PlatformTop" unique_id=988467098]
 anchors_preset = 8
