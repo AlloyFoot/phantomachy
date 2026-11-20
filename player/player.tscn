@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://3mrs7jxipue"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ymhcm"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1665840665]
+collision_layer = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=916774257]
+color = Color(0.29411766, 1, 1, 1)
+polygon = PackedVector2Array(-9.92395, 8.679043, -10.179406, -5.231194, -5.2879105, -13.242776, 6.235939, -13.044088, 9.547394, -6.4874115, 9.679855, 8.811502, 3.7799864, 4.807692, -0.25450897, 10.864603, -6.734111, 4.332478)
+uv = PackedVector2Array(-26.150146, 6.6765423, -26.166645, 2.4034433, -24.764278, 0.9845766, -21.745062, 1.0010751, -20.392189, 2.089973, -20.326195, 6.5115576, -22.28951, 5.1916814, -23.79087, 6.4455633, -25.209736, 5.059694)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1182516212]
+shape = SubResource("CapsuleShape2D_ymhcm")
