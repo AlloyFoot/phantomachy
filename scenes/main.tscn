@@ -9,15 +9,19 @@
 
 [node name="Player" parent="." unique_id=1665840665 instance=ExtResource("2_sugp2")]
 position = Vector2(859, 285)
+player_number = 1
 
 [node name="Player2" parent="." unique_id=207684262 instance=ExtResource("2_sugp2")]
 position = Vector2(325, 293)
+player_number = 2
 
 [node name="Player3" parent="." unique_id=2112442473 instance=ExtResource("2_sugp2")]
 position = Vector2(346, 432)
+player_number = 3
 
 [node name="Player4" parent="." unique_id=314598586 instance=ExtResource("2_sugp2")]
 position = Vector2(814, 433)
+player_number = 4
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1768012741]
 position = Vector2(576, 324)
