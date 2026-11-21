@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://l2sa5o4oqljx"]
+
+[ext_resource type="Script" uid="uid://bd7fykay6hv5v" path="res://main.gd" id="1_ebgoi"]
+[ext_resource type="PackedScene" uid="uid://cqhc34hay6d8w" path="res://scenes/stages/colosseum.tscn" id="2_qd8w0"]
+[ext_resource type="PackedScene" uid="uid://3mrs7jxipue" path="res://player/player.tscn" id="3_sgy3i"]
+
+[node name="Main" type="Node2D" unique_id=463935177]
+script = ExtResource("1_ebgoi")
+
+[node name="Colosseum" parent="." unique_id=822249924 instance=ExtResource("2_qd8w0")]
+
+[node name="Player" parent="." unique_id=1665840665 instance=ExtResource("3_sgy3i")]
+position = Vector2(859, 285)
+player_number = 1
+move_speed = 350.0
+ground_accel = 2500.0
+ground_decel = 3000.0
+air_accel = 1500.0
+air_decel = 800.0
+jump_velocity = -600.0
+jump_cut = 0.5
+gravity = 1600.0
+fast_fall_gravity = 3200.0
+max_fall_speed = 700.0
+fast_fall_max_speed = 1000.0
+max_jumps = 2
+coyote_time = 0.1
+jump_buffer_time = 0.1
+
+[node name="Player2" parent="." unique_id=207684262 instance=ExtResource("3_sgy3i")]
+position = Vector2(325, 293)
+player_number = 2
+move_speed = 350.0
+ground_accel = 2500.0
+ground_decel = 3000.0
+air_accel = 1500.0
+air_decel = 800.0
+jump_velocity = -600.0
+jump_cut = 0.5
+gravity = 1600.0
+fast_fall_gravity = 3200.0
+max_fall_speed = 700.0
+fast_fall_max_speed = 1000.0
+max_jumps = 2
+coyote_time = 0.1
+jump_buffer_time = 0.1
+
+[node name="Player3" parent="." unique_id=2112442473 instance=ExtResource("3_sgy3i")]
+position = Vector2(346, 432)
+player_number = 3
+move_speed = 350.0
+ground_accel = 2500.0
+ground_decel = 3000.0
+air_accel = 1500.0
+air_decel = 800.0
+jump_velocity = -600.0
+jump_cut = 0.5
+gravity = 1600.0
+fast_fall_gravity = 3200.0
+max_fall_speed = 700.0
+fast_fall_max_speed = 1000.0
+max_jumps = 2
+coyote_time = 0.1
+jump_buffer_time = 0.1
+
+[node name="Player4" parent="." unique_id=314598586 instance=ExtResource("3_sgy3i")]
+position = Vector2(814, 433)
+player_number = 4
+move_speed = 350.0
+ground_accel = 2500.0
+ground_decel = 3000.0
+air_accel = 1500.0
+air_decel = 800.0
+jump_velocity = -600.0
+jump_cut = 0.5
+gravity = 1600.0
+fast_fall_gravity = 3200.0
+max_fall_speed = 700.0
+fast_fall_max_speed = 1000.0
+max_jumps = 2
+coyote_time = 0.1
+jump_buffer_time = 0.1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1768012741]
+position = Vector2(576, 324)

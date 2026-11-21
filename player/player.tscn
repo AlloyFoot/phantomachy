@@ -1,32 +1,32 @@
 [gd_scene format=3 uid="uid://3mrs7jxipue"]
 
 [ext_resource type="Script" uid="uid://dvxi8oropb2hm" path="res://player/player.gd" id="1_oul6g"]
+[ext_resource type="Resource" uid="uid://bcdxyste5a1sc" path="res://weapons/pistol.tres" id="2_rkbax"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ymhcm"]
+radius = 20.0
+height = 60.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymhcm"]
+size = Vector2(40, 50)
 
 [node name="Player" type="CharacterBody2D" unique_id=1665840665]
 collision_layer = 2
 script = ExtResource("1_oul6g")
-player_number = null
-move_speed = null
-ground_accel = null
-ground_decel = null
-air_accel = null
-air_decel = null
-jump_velocity = null
-jump_cut = null
-gravity = null
-fast_fall_gravity = null
-max_fall_speed = null
-fast_fall_max_speed = null
-max_jumps = null
-coyote_time = null
-jump_buffer_time = null
+pistol = ExtResource("2_rkbax")
 
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=916774257]
 color = Color(0.29411766, 1, 1, 1)
-polygon = PackedVector2Array(-9.92395, 8.679043, -10.179406, -5.231194, -5.2879105, -13.242776, 6.235939, -13.044088, 9.547394, -6.4874115, 9.679855, 8.811502, 3.7799864, 4.807692, -0.25450897, 10.864603, -6.734111, 4.332478)
+polygon = PackedVector2Array(-18.920773, 16.886902, -19.416248, -10.093029, -9.928829, -25.632086, 12.422528, -25.246716, 18.845339, -12.529555, 19.102257, 17.143818, 7.6590266, 9.378132, -0.16617541, 21.125957, -12.733841, 8.45642)
 uv = PackedVector2Array(-26.150146, 6.6765423, -26.166645, 2.4034433, -24.764278, 0.9845766, -21.745062, 1.0010751, -20.392189, 2.089973, -20.326195, 6.5115576, -22.28951, 5.1916814, -23.79087, 6.4455633, -25.209736, 5.059694)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1182516212]
 shape = SubResource("CapsuleShape2D_ymhcm")
+
+[node name="MeleeArea" type="Area2D" parent="." unique_id=570278374]
+position = Vector2(30, 0)
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MeleeArea" unique_id=1680211672]
+shape = SubResource("RectangleShape2D_ymhcm")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://hmrjmqdgwww"]
+
+[ext_resource type="Script" uid="uid://b2em8ybuvhenm" path="res://weapons/bullet.gd" id="1_fc8e7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ymhcm"]
+size = Vector2(12, 4)
+
+[node name="Bullet" type="Area2D" unique_id=1837723085]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_fc8e7")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1009104419]
+color = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-3.2939682, -1.6522436, -3.2939682, 1.7403078, 3.4911346, 1.7403078, 3.4911346, -1.6522436)
+uv = PackedVector2Array(0, -8, 0, 0, 16, 0, 16, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=787304793]
+shape = SubResource("RectangleShape2D_ymhcm")

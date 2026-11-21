@@ -1,13 +1,37 @@
 [gd_scene format=3 uid="uid://cqhc34hay6d8w"]
 
+[ext_resource type="Script" uid="uid://bw6x4lc8ps2dr" path="res://scenes/stages/blast_zone.gd" id="1_gpvjw"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jyk7v"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_20vcf"]
+size = Vector2(1850, 1200)
+
 [node name="Colosseum" type="Node2D" unique_id=822249924]
+
+[node name="SpawnPoints" type="Node2D" parent="." unique_id=1422367672]
+
+[node name="Spawn1" type="Marker2D" parent="SpawnPoints" unique_id=1976270138 groups=["spawn_points"]]
+position = Vector2(400, 400)
+metadata/_edit_lock_ = true
+
+[node name="Spawn2" type="Marker2D" parent="SpawnPoints" unique_id=995310812 groups=["spawn_points"]]
+position = Vector2(752, 400)
+metadata/_edit_lock_ = true
+
+[node name="Spawn3" type="Marker2D" parent="SpawnPoints" unique_id=718590199 groups=["spawn_points"]]
+position = Vector2(517.333, 400)
+metadata/_edit_lock_ = true
+
+[node name="Spawn4" type="Marker2D" parent="SpawnPoints" unique_id=1807918952 groups=["spawn_points"]]
+position = Vector2(634.667, 400)
+metadata/_edit_lock_ = true
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1411964052]
 position = Vector2(576, 480)
 scale = Vector2(50, 1)
 collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1010247099]
 shape = SubResource("RectangleShape2D_jyk7v")
@@ -29,6 +53,7 @@ grow_vertical = 2
 position = Vector2(288, 330)
 scale = Vector2(10, 1)
 collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformLeft" unique_id=2125551245]
 shape = SubResource("RectangleShape2D_jyk7v")
@@ -51,6 +76,7 @@ grow_vertical = 2
 position = Vector2(864, 330)
 scale = Vector2(10, 1)
 collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformRight" unique_id=1452208650]
 shape = SubResource("RectangleShape2D_jyk7v")
@@ -74,6 +100,7 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(576, 180)
 scale = Vector2(10, 1)
 collision_mask = 0
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformTop" unique_id=577797]
 shape = SubResource("RectangleShape2D_jyk7v")
@@ -91,3 +118,14 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BlastZone" type="Area2D" parent="." unique_id=2004494299]
+collision_layer = 32
+collision_mask = 2
+script = ExtResource("1_gpvjw")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlastZone" unique_id=1035983963]
+position = Vector2(576, 250)
+shape = SubResource("RectangleShape2D_20vcf")
+metadata/_edit_lock_ = true
